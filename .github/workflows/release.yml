@@ -406,7 +406,7 @@ jobs:
         run: chmod +x ./k0s-*/k0s
 
       - name: Build image and push to Docker Hub and GitHub image registry
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm/v7
