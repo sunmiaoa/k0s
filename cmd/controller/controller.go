@@ -34,7 +34,6 @@ import (
 	"github.com/k0sproject/k0s/internal/pkg/dir"
 	"github.com/k0sproject/k0s/internal/pkg/file"
 	k0slog "github.com/k0sproject/k0s/internal/pkg/log"
-	"github.com/k0sproject/k0s/internal/pkg/stringmap"
 	"github.com/k0sproject/k0s/internal/pkg/sysinfo"
 	"github.com/k0sproject/k0s/pkg/apis/k0s/v1beta1"
 	"github.com/k0sproject/k0s/pkg/applier"
@@ -98,8 +97,6 @@ func NewControllerCmd() *cobra.Command {
 			if err := c.ControllerOptions.Normalize(); err != nil {
 				return err
 			}
-
-			c.Logging = stringmap.Merge(c.CmdLogLevels, c.DefaultLogLevels)
 
 			if err := (&sysinfo.K0sSysinfoSpec{
 				ControllerRoleEnabled: true,
@@ -210,7 +207,7 @@ func (c *command) start(ctx context.Context) error {
 			Config:      nodeConfig.Spec.Storage.Etcd,
 			JoinClient:  joinClient,
 			K0sVars:     c.K0sVars,
-			LogLevel:    c.Logging["etcd"],
+			LogLevel:    c.LogLevels.Etcd,
 		}
 	default:
 		return fmt.Errorf("invalid storage type: %s", nodeConfig.Spec.Storage.Type)
@@ -250,7 +247,7 @@ func (c *command) start(ctx context.Context) error {
 	if enableKonnectivity {
 		nodeComponents.Add(ctx, &controller.Konnectivity{
 			SingleNode:                 c.SingleNode,
-			LogLevel:                   c.Logging[constant.KonnectivityServerComponentName],
+			LogLevel:                   c.LogLevels.Konnectivity,
 			K0sVars:                    c.K0sVars,
 			KubeClientFactory:          adminClientFactory,
 			NodeConfig:                 nodeConfig,
@@ -262,7 +259,7 @@ func (c *command) start(ctx context.Context) error {
 	nodeComponents.Add(ctx, &controller.APIServer{
 		ClusterConfig:             nodeConfig,
 		K0sVars:                   c.K0sVars,
-		LogLevel:                  c.Logging["kube-apiserver"],
+		LogLevel:                  c.LogLevels.KubeAPIServer,
 		Storage:                   storageBackend,
 		EnableKonnectivity:        enableKonnectivity,
 		DisableEndpointReconciler: disableEndpointReconciler,
@@ -339,7 +336,7 @@ func (c *command) start(ctx context.Context) error {
 		if err != nil {
 			return fmt.Errorf("failed to initialize etcd-member manifests saver: %w", err)
 		}
-		clusterComponents.Add(ctx, controller.NewCRD(etcdCRDSaver, []string{"etcd"}))
+		clusterComponents.Add(ctx, controller.NewCRD(etcdCRDSaver, "etcd"))
 		nodeComponents.Add(ctx, etcdReconciler)
 	}
 
@@ -396,7 +393,7 @@ func (c *command) start(ctx context.Context) error {
 			return fmt.Errorf("failed to initialize api-config manifests saver: %w", err)
 		}
 
-		clusterComponents.Add(ctx, controller.NewCRD(apiConfigSaver, []string{"v1beta1"}))
+		clusterComponents.Add(ctx, controller.NewCRD(apiConfigSaver, "v1beta1", controller.WithCRDAssetsDir("k0s")))
 	}
 
 	cfgReconciler, err := controller.NewClusterConfigReconciler(
@@ -416,7 +413,7 @@ func (c *command) start(ctx context.Context) error {
 		if err != nil {
 			return fmt.Errorf("failed to initialize helm manifests saver: %w", err)
 		}
-		clusterComponents.Add(ctx, controller.NewCRD(helmSaver, []string{"helm"}))
+		clusterComponents.Add(ctx, controller.NewCRD(helmSaver, "helm"))
 		clusterComponents.Add(ctx, controller.NewExtensionsController(
 			helmSaver,
 			c.K0sVars,
@@ -432,7 +429,7 @@ func (c *command) start(ctx context.Context) error {
 			logrus.Warnf("failed to initialize reconcilers manifests saver: %s", err.Error())
 			return err
 		}
-		clusterComponents.Add(ctx, controller.NewCRD(manifestsSaver, []string{"autopilot"}))
+		clusterComponents.Add(ctx, controller.NewCRD(manifestsSaver, "autopilot"))
 	}
 
 	if !slices.Contains(c.DisableComponents, constant.APIEndpointReconcilerComponentName) && nodeConfig.Spec.API.ExternalAddress != "" {
@@ -522,7 +519,7 @@ func (c *command) start(ctx context.Context) error {
 	if enableKonnectivity {
 		clusterComponents.Add(ctx, &controller.KonnectivityAgent{
 			SingleNode:                 c.SingleNode,
-			LogLevel:                   c.Logging[constant.KonnectivityServerComponentName],
+			LogLevel:                   c.LogLevels.Konnectivity,
 			K0sVars:                    c.K0sVars,
 			KubeClientFactory:          adminClientFactory,
 			NodeConfig:                 nodeConfig,
@@ -533,7 +530,7 @@ func (c *command) start(ctx context.Context) error {
 
 	if !slices.Contains(c.DisableComponents, constant.KubeSchedulerComponentName) {
 		clusterComponents.Add(ctx, &controller.Scheduler{
-			LogLevel:   c.Logging[constant.KubeSchedulerComponentName],
+			LogLevel:   c.LogLevels.KubeScheduler,
 			K0sVars:    c.K0sVars,
 			SingleNode: c.SingleNode,
 		})
@@ -541,7 +538,7 @@ func (c *command) start(ctx context.Context) error {
 
 	if !slices.Contains(c.DisableComponents, constant.KubeControllerManagerComponentName) {
 		clusterComponents.Add(ctx, &controller.Manager{
-			LogLevel:              c.Logging[constant.KubeControllerManagerComponentName],
+			LogLevel:              c.LogLevels.KubeControllerManager,
 			K0sVars:               c.K0sVars,
 			SingleNode:            c.SingleNode,
 			ServiceClusterIPRange: nodeConfig.Spec.Network.BuildServiceCIDR(nodeConfig.Spec.API.Address),
