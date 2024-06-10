@@ -8,7 +8,7 @@ require (
 	github.com/Masterminds/semver/v3 v3.2.1
 	github.com/Masterminds/sprig v2.22.0+incompatible
 	github.com/Microsoft/go-winio v0.6.2
-	github.com/Microsoft/hcsshim v0.12.3
+	github.com/Microsoft/hcsshim v0.12.4
 	github.com/asaskevich/govalidator v0.0.0-20200428143746-21a406dcc535
 	github.com/avast/retry-go v3.0.0+incompatible
 	github.com/bombsimon/logrusr/v4 v4.1.0
