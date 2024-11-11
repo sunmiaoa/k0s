@@ -1,9 +1,11 @@
 module tool
 
 go 1.22.0
+toolchain go1.23.3
+
 require (
 	github.com/hashicorp/terraform-exec v0.21.0
-	github.com/k0sproject/k0sctl v0.19.2
+	github.com/k0sproject/k0sctl v0.19.3
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/pflag v1.0.5
 )

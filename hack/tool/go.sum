@@ -145,8 +145,8 @@ github.com/json-iterator/go v1.1.12 h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnr
 github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHmT4TnhNGBo=
 github.com/k0sproject/dig v0.2.0 h1:cNxEIl96g9kqSMfPSZLhpnZ0P8bWXKv08nxvsMHop5w=
 github.com/k0sproject/dig v0.2.0/go.mod h1:rBcqaQlJpcKdt2x/OE/lPvhGU50u/e95CSm5g/r4s78=
-github.com/k0sproject/k0sctl v0.19.2 h1:iY42diT+YOGgLJlg2NtAw5eaxW7FwTrqJ35pnz1XaC0=
-github.com/k0sproject/k0sctl v0.19.2/go.mod h1:1H32FowgGZT8DAJbFKDuYBlZ8hwixvWNng/RcavF1D0=
+github.com/k0sproject/k0sctl v0.19.3 h1:tRvGLrY3q3gGnEIAMkDHP3DIOp2ALDfhpTdgPDWEpKk=
+github.com/k0sproject/k0sctl v0.19.3/go.mod h1:1H32FowgGZT8DAJbFKDuYBlZ8hwixvWNng/RcavF1D0=
 github.com/k0sproject/rig v0.18.8 h1:Dudzljvztdk5f5DGV8f07eRZBIXRTxpIslEMhRthLNA=
 github.com/k0sproject/rig v0.18.8/go.mod h1:rV9v56TQ6e62jgpAO1kEuoMMczwNH/I1MIxiV8gsvmg=
 github.com/k0sproject/version v0.6.0 h1:Wi8wu9j+H36+okIQA47o/YHbzNpKeIYj8IjGdJOdqsI=
