@@ -16,7 +16,7 @@ require (
 	github.com/bombsimon/logrusr/v4 v4.1.0
 	github.com/carlmjohnson/requests v0.24.3
 	github.com/cavaliergopher/grab/v3 v3.0.1
-	github.com/cilium/ebpf v0.16.0
+	github.com/cilium/ebpf v0.17.0
 	github.com/cloudflare/cfssl v1.6.5
 	github.com/containerd/cgroups/v3 v3.0.4
 	github.com/containerd/containerd v1.7.23
