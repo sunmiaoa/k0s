@@ -1,6 +1,7 @@
 module github.com/k0sproject/k0s
 
-go 1.22.0
+go 1.23.0
+
 toolchain go1.24.1
 
 // k0s
@@ -44,7 +45,7 @@ require (
 	github.com/spf13/pflag v1.0.6
 	github.com/stretchr/testify v1.10.0
 	github.com/urfave/cli v1.22.16
-	github.com/vishvananda/netlink v1.3.0
+	github.com/vishvananda/netlink v1.3.1
 	github.com/vmware-tanzu/sonobuoy v0.57.3
 	github.com/zcalusic/sysinfo v1.1.3
 	go.etcd.io/etcd/api/v3 v3.5.13
@@ -231,7 +232,7 @@ require (
 	github.com/spf13/cast v1.7.0 // indirect
 	github.com/stoewer/go-strcase v1.3.0 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
-	github.com/vishvananda/netns v0.0.4 // indirect
+	github.com/vishvananda/netns v0.0.5 // indirect
 	github.com/weppos/publicsuffix-go v0.30.0 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect
 	github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415 // indirect
