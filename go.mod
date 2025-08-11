@@ -24,7 +24,7 @@ require (
 	github.com/go-openapi/jsonpointer v0.21.2
 	github.com/go-playground/validator/v10 v10.27.0
 	github.com/google/go-cmp v0.7.0
-	github.com/k0sproject/bootloose v0.9.2
+	github.com/k0sproject/bootloose v0.9.3
 	github.com/k0sproject/dig v0.4.0
 	github.com/k0sproject/version v0.7.0
 	github.com/kardianos/service v1.2.4
@@ -122,7 +122,7 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/daviddengcn/go-colortext v1.0.0 // indirect
 	github.com/distribution/reference v0.6.0 // indirect
-	github.com/docker/go-connections v0.5.0 // indirect
+	github.com/docker/go-connections v0.6.0 // indirect
 	github.com/docker/go-events v0.0.0-20190806004212-e31b211e4f1c // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
