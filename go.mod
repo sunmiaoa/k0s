@@ -16,7 +16,7 @@ require (
 	github.com/cavaliergopher/grab/v3 v3.0.1
 	github.com/cilium/ebpf v0.20.0
 	github.com/cloudflare/cfssl v1.6.5
-	github.com/containerd/cgroups/v3 v3.1.0
+	github.com/containerd/cgroups/v3 v3.1.1
 	github.com/containerd/containerd v1.7.28
 	github.com/evanphx/json-patch v5.9.11+incompatible
 	github.com/fsnotify/fsnotify v1.9.0
@@ -32,7 +32,7 @@ require (
 	github.com/mesosphere/toml-merge v0.2.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/olekukonko/tablewriter v0.0.5
-	github.com/opencontainers/runtime-spec v1.2.1
+	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/otiai10/copy v1.14.1
 	github.com/pelletier/go-toml v1.9.5
 	github.com/robfig/cron v1.2.0
