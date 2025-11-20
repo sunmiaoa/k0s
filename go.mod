@@ -50,7 +50,7 @@ require (
 	go.etcd.io/etcd/client/pkg/v3 v3.5.13
 	go.etcd.io/etcd/client/v3 v3.5.13
 	go.etcd.io/etcd/etcdutl/v3 v3.5.13
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.27.1
 	golang.org/x/crypto v0.45.0
 	golang.org/x/mod v0.30.0
 	golang.org/x/sync v0.18.0
