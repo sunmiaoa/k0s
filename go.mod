@@ -1,6 +1,6 @@
 module github.com/k0sproject/k0s
 
-go 1.24.2
+go 1.24.9
 
 // k0s
 require (
@@ -44,7 +44,7 @@ require (
 	github.com/stretchr/testify v1.11.1
 	github.com/urfave/cli v1.22.17
 	github.com/vishvananda/netlink v1.3.1
-	github.com/vmware-tanzu/sonobuoy v0.57.3
+	github.com/vmware-tanzu/sonobuoy v0.57.4
 	github.com/zcalusic/sysinfo v1.1.3
 	go.etcd.io/etcd/api/v3 v3.5.13
 	go.etcd.io/etcd/client/pkg/v3 v3.5.13
