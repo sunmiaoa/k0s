@@ -57,22 +57,22 @@ require (
 	golang.org/x/sys v0.39.0
 	golang.org/x/tools v0.40.0
 	google.golang.org/grpc v1.77.0
-	helm.sh/helm/v3 v3.19.3
+	helm.sh/helm/v3 v3.19.4
 )
 
 // Kubernetes
 require (
-	k8s.io/api v0.34.0
-	k8s.io/apiextensions-apiserver v0.34.0
-	k8s.io/apimachinery v0.34.0
-	k8s.io/cli-runtime v0.34.0
-	k8s.io/client-go v0.34.0
+	k8s.io/api v0.34.2
+	k8s.io/apiextensions-apiserver v0.34.2
+	k8s.io/apimachinery v0.34.2
+	k8s.io/cli-runtime v0.34.2
+	k8s.io/client-go v0.34.2
 	k8s.io/cloud-provider v0.30.1
-	k8s.io/component-base v0.34.0
+	k8s.io/component-base v0.34.2
 	k8s.io/component-helpers v0.30.1
 	k8s.io/cri-api v0.30.1
 	k8s.io/kube-aggregator v0.30.1
-	k8s.io/kubectl v0.34.0
+	k8s.io/kubectl v0.34.2
 	k8s.io/kubelet v0.30.1
 	k8s.io/kubernetes v1.30.1
 	k8s.io/mount-utils v0.30.1
@@ -119,7 +119,7 @@ require (
 	github.com/coreos/go-semver v0.3.1 // indirect
 	github.com/coreos/go-systemd/v22 v22.5.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.7 // indirect
-	github.com/cyphar/filepath-securejoin v0.6.0 // indirect
+	github.com/cyphar/filepath-securejoin v0.6.1 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/daviddengcn/go-colortext v1.0.0 // indirect
 	github.com/distribution/reference v0.6.0 // indirect
@@ -268,7 +268,7 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/apiserver v0.34.0 // indirect
+	k8s.io/apiserver v0.34.2 // indirect
 	k8s.io/controller-manager v0.30.1 // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/kms v0.30.1 // indirect
