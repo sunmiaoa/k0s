@@ -63,8 +63,8 @@ github.com/briandowns/spinner v1.19.0 h1:s8aq38H+Qju89yhp89b4iIiMzMm8YN3p6vGpwyh
 github.com/briandowns/spinner v1.19.0/go.mod h1:mQak9GHqbspjC/5iUx3qMlIho8xBS/ppAL/hX5SmPJU=
 github.com/bshuster-repo/logrus-logstash-hook v1.1.0 h1:o2FzZifLg+z/DN1OFmzTWzZZx/roaqt8IPZCIVco8r4=
 github.com/bshuster-repo/logrus-logstash-hook v1.1.0/go.mod h1:Q2aXOe7rNuPgbBtPCOzYyWDvKX7+FpxE5sRdvcPoui0=
-github.com/carlmjohnson/requests v0.25.1 h1:17zNRLecxtAjhtdEIV+F+wrYfe+AGZUjWJtpndcOUYA=
-github.com/carlmjohnson/requests v0.25.1/go.mod h1:z3UEf8IE4sZxZ78spW6/tLdqBkfCu1Fn4RaYMnZ8SRM=
+github.com/carlmjohnson/requests v0.26.1 h1:kFt5j1XsynNKoladW2qJdP9S+UdigvGLW+53DXbN5F4=
+github.com/carlmjohnson/requests v0.26.1/go.mod h1:qMGUsG9/8MbvYRMGwvMBVSQQmRswVcVMAzexVyy038g=
 github.com/cavaliergopher/grab/v3 v3.0.1 h1:4z7TkBfmPjmLAAmkkAZNX/6QJ1nNFdv3SdIHXju0Fr4=
 github.com/cavaliergopher/grab/v3 v3.0.1/go.mod h1:1U/KNnD+Ft6JJiYoYBAimKH2XrYptb8Kl3DFGmsjpq4=
 github.com/cenkalti/backoff/v5 v5.0.3 h1:ZN+IMa753KfX5hd8vVaMixjnqRZ3y8CuJKRKj1xcsSM=
