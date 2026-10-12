@@ -17,7 +17,7 @@ require (
 	github.com/carlmjohnson/requests v0.26.2
 	github.com/cavaliergopher/grab/v3 v3.0.1
 	github.com/cilium/ebpf v0.22.0
-	github.com/cloudflare/cfssl v1.7.0
+	github.com/cloudflare/cfssl v1.7.1
 	github.com/containerd/cgroups/v3 v3.1.3
 	github.com/containerd/containerd v1.7.32
 	github.com/evanphx/json-patch v5.9.11+incompatible
